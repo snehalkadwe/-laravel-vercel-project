@@ -1,5 +1,15 @@
 {
     "version": 2,
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "@vercel/php",
+            "config": {
+                "includeFiles": "public/**"
+            },
+            "buildCommand": "./install.sh && composer install"
+        }
+    ],
     "framework": null,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
@@ -14,7 +24,7 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://laravel-vercel-project.vercel.app",
-        "APP_KEY": "base64:fax7xBina3JsFf+f/8yzkZqR8RAtC1lR2uJtCFdtQ99=",
+        "APP_KEY": "base64:BA4CDWO50udSYWfwYzzWkAGb/HYpSMII9AkZNZjHp4c=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
